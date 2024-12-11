@@ -1,0 +1,457 @@
+/* Definice proměnných */
+$primary-color: #fffb02;
+$secondary-color: #f8c008;
+$highlight-color: #3498db;
+$text-color: #282425;
+$bg-color: #80f089;
+$font-stack: "Montserrat", sans-serif;
+$grey-500: #6c757d;
+$grey-700: #495057;
+
+/* Mixin pro border-radius */
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+/* Globální styly */
+html {
+  box-sizing: border-box;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+body {
+  color: $text-color;
+  background-color: $bg-color;
+  font-family: $font-stack;
+  font-optical-sizing: auto;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Styl pro mobilní zařízení (menší obrazovky) */
+@media screen and (max-width: 600px) {
+  .header {
+    background-image: url(../images/slunecnice.jpg);
+    padding: 100px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;    
+  }
+  
+  h1 {
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    margin: 0;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 7);
+  }
+  
+  .menu {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: $primary-color;
+  }   
+
+  .menu__list {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+   }
+
+  .menu__item {
+    display: inline-block;    
+    padding: 10px 15px;
+  }
+
+  .menu__item:hover,
+  .menu__item:focus,
+  .menu__item:active {
+    background-color: $secondary-color;
+  }
+  
+  .menu a {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+    color: black;
+  }
+  
+  .footer {
+    background-color: $primary-color;
+    font-size: 12px;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+  } 
+
+  /*O nás*/
+  h2 { 
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .rostlina1 {
+    display: block;
+    gap: 10px;
+  }
+  
+  .box1, .box2 {
+    order: initial;
+    text-align: left;
+    margin: 10px 0;
+  }
+
+  .foto-zne {
+    margin: 5px 0;
+    width: 100%;
+    @include border-radius(20px);
+  } 
+  
+  .zivocich1 {
+    display: block;
+    gap: 10px;
+  }
+  
+  .foto-byci {
+    margin: 5px 0;
+    width: 100%;
+    @include border-radius(20px);
+  }
+
+  .zivocich1 p {
+    margin-top: 20px;
+  }
+
+  /*Prodejna*/
+  .prodejna {
+    margin: 10px;
+  }
+
+  .obchod {
+    display: block;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  
+  .obchod1,
+  .obchod2 {
+    padding-left: 0;
+  }
+  
+  .obchod h3 {
+    text-align: center;
+  }
+
+  table {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-spacing: 0;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  
+  td {
+    border-bottom: 1px solid black;
+    text-align: left;
+    padding: 5px 0;
+  }
+
+  .doba {
+    text-align: right;
+    padding-left: 0;
+  }
+  
+  .foto-listy {
+    margin: 5px 0;
+    width: 580px;
+    height: 50px;
+    @include border-radius(20px);
+  }
+
+  /*Půda*/
+  .puda {
+    display: block;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  
+  .puda_text,
+  .puda_formular {
+    margin-left: 0;
+    text-align: left;
+  }
+
+  /*Formular*/
+  .form-field {
+    margin-bottom: var(--spacer-half);
+  }
+  
+  .form-field label {
+    font-size: 14px;
+  }
+  
+  .form-field :is(input, textarea, select) {
+    width: 100%;
+  }
+
+  /*Kontakt*/
+  .kontakt {
+    margin: 10px;
+  }
+
+  .kontakt_obrazky {
+    display: block;
+    justify-content: center;
+  }
+
+  .image-box {
+    flex: none;
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  img {
+    height: auto;
+    @include border-radius(10px);
+  }
+  
+  .kontakt1, .kontakt2 {
+    display: block;
+    justify-content: center;
+  }
+  
+  .kontakt1-box,
+  .kontakt2-box {
+    flex: none;
+    width: 100%;
+  }
+}
+
+/* Styl pro desktop (větší obrazovky) */
+@media screen and (min-width: 1100px) {
+  .header {
+    background-image: url(../images/slunecnice.jpg);
+    padding: 150px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  h1 {
+    font-size: 80px;
+    text-align: center;
+    color: white;
+    margin: 0;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 7);
+  }
+  
+  .menu {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: $primary-color;
+  }
+  
+  .menu__list {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu__item {
+    display: inline-block;
+    padding: 20px 30px;
+  }
+  
+  .menu__item:hover,
+  .menu__item:focus,
+  .menu__item:active {
+    background-color: $secondary-color;
+  }
+  
+  .menu a {
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+    color: black;
+  }
+  
+  .footer {
+    background-color: $primary-color;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+  }
+
+  /*O nás*/
+  h2 {
+    font-size: 30px;
+    text-align: center;     
+  }
+
+  .rostlina1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .box1 {
+    order: 2;
+    text-align: center;
+  }
+
+  .box2 {
+    order: 1;
+    margin-top: 50px;
+  }
+
+  .foto-zne {
+    margin: 5px;
+    width: 400px;
+    @include border-radius(50px);
+  }
+
+  .zivocich1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .foto-byci {
+    margin: 5px;
+    width: 400px;
+    @include border-radius(50px);
+  }
+
+  .zivocich1 p {
+    margin-top: 60px;
+  }
+
+  /*Prodejna*/
+  .prodejna {
+    margin: 15px;
+  }
+
+  .obchod {
+    display: flex;
+    gap: 20px;
+    margin: 15px;
+  }
+
+  .obchod1,
+  .obchod2 {
+    flex: 1;
+  }
+
+  .obchod1 {
+    padding-left: 150px;
+  }
+
+  table {
+    border-spacing: 0;
+    padding: 20px;
+  }
+  
+  td {
+    border-bottom: 1px solid black;
+    text-align: left;
+    padding: 10px 0;
+  }
+
+  .doba {
+    text-align: right;
+    padding-left: 50px;
+  }
+
+  /*Půda*/
+  .puda {
+    display: flex;
+    gap: 20px;
+    margin: 15px;
+  }
+
+  .puda_text {
+    flex: 1;
+    text-align: justify;
+  }
+
+  .puda_formular {
+    flex: 1;
+    margin-left: 200px;
+  }
+
+   .puda_formular h2 {
+    text-align: left;
+  }
+
+   /*Formular*/
+   .form-field {
+    margin-bottom: var(--spacer);
+  }
+  
+  .form-field label {
+    display: block;
+    color: $grey-500;
+    font-size: 15px;
+    margin-bottom: var(--spacer-half);
+  }
+
+   :is(input, textarea, select) {
+    width: 70%;
+    padding: 5px;
+    border: 1px solid var(--grey-700);
+    @include border-radius(4px);
+  } 
+
+
+  .required:after {
+    content: "*";
+    color: red;
+    margin-left: 4px;
+  } 
+
+  /* Kontakt */
+  .kontakt {
+    margin: 15px;
+  }
+
+  .kontakt_obrazky {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .image-box {
+    flex: 1 1 calc(33.333% - 10px);
+    margin: 5px;
+    box-sizing: border-box;
+  }
+
+  img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border: 2px solid black;
+    @include border-radius(10px);
+  }
+  
+  .kontakt1, .kontakt2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .kontakt1-box,
+  .kontakt2-box {
+    flex: 1 1 calc(33.333% - 10px);
+    margin: 5px;
+  } 
+} 
