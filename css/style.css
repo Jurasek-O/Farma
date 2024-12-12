@@ -84,7 +84,8 @@ body {
     margin: 10px 0;
   }
   .foto-zne {
-    margin: 5px 0;
+    margin: 5px 5px;
+    padding: 5px;
     width: 100%;
     border-radius: 20px;
   }
@@ -93,7 +94,8 @@ body {
     gap: 10px;
   }
   .foto-byci {
-    margin: 5px 0;
+    margin: 5px 5px;
+    padding: 5px;
     width: 100%;
     border-radius: 20px;
   }
@@ -134,9 +136,9 @@ body {
     padding-left: 0;
   }
   .foto-listy {
-    margin: 5px 0;
-    width: 580px;
-    height: 50px;
+    padding: 0;
+    width: 550px;
+    height: 250px;
     border-radius: 20px;
   }
   /*Půda*/
@@ -147,7 +149,8 @@ body {
   }
   .puda_text,
   .puda_formular {
-    margin-left: 0;
+    margin-left: 10 px;
+    padding: 10px;
     text-align: left;
   }
   /*Formular*/
@@ -171,10 +174,12 @@ body {
   .image-box {
     flex: none;
     width: 100%;
-    margin: 5px 0;
+    margin: 5px;
   }
   img {
-    height: auto;
+    padding: 5px;
+    width: 500px;
+    height: 250px;
     border-radius: 10px;
   }
   .kontakt1, .kontakt2 {
